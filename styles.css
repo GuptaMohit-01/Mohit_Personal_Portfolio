@@ -1,0 +1,875 @@
+/* General Styles */
+
+/* styles.css */
+
+/* Apply the background image */
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-image: url('IMG_1208.webp');
+    /* -webkit-filter: blur(8px); */
+    /* background-image: repeating-radial-gradient(red, yellow 10%, green 20%); */
+    /* Replace with your image path */
+    background-size: cover;
+    /* Scale the background image to cover the viewport */
+    background-position: center center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent repeating the image */
+    background-attachment: fixed;
+    /* Keep the image fixed while scrolling */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+
+
+/* Glassy Navigation Bar */
+header {
+    background: rgba(152, 99, 178, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 30px rgba(190, 174, 174, 0.1);
+    color: #79a1ef;
+    padding: 16px;
+    margin-top:0.1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* General Nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+    /* Make sure it's above the content */
+}
+
+.menu-icon .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #4c68b4;
+    /* Adjust color for better visibility */
+    margin: 3px 0;
+    border-radius: 5px;
+}
+
+#nav-links {
+    display: flex;
+    /* Default display for large screens */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links li {
+    margin-left: 15px;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: #38d60d;
+    padding: 10px;
+    border: 1px solid rgb(254, 252, 252);
+    border-radius: 80px;
+}
+
+#nav-links li a:hover {
+    background: linear-gradient(to right, rgb(160, 42, 31), rgb(209, 78, 227));
+    color: transparent;
+    background-clip: text;
+}
+
+/* Hide the menu items on small screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+        /* Show the hamburger icon */
+    }
+
+    #nav-links {
+        display: none;
+        /* Hide links by default */
+        flex-direction: column;
+        /* Vertical list */
+        background-color: rgba(237, 10, 10, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .show {
+        display: flex;
+        z-index: 1000px;
+        visibility: visible;
+    }
+
+
+    #nav-links.show {
+        display: flex;
+        /* z-index: 999px;
+        visibility: hidden; */
+        /* Show menu when hamburger is clicked */
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+    }
+
+    #nav-links li a {
+        padding: 10px 20px;
+        color: #ffffff;
+        /* Change color for better visibility */
+    }
+}
+
+
+
+#element:hover {
+    cursor: progress;
+}
+
+#element h1 {
+    color: rgb(184, 43, 11);
+    font-size: 80px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#element h2 {
+    color: rgb(46, 99, 5);
+    font-size: 70px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+#element h3 {
+    color: rgba(210, 214, 5, 0.829);
+    font-size: 60px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    background: linear-gradient(to right, rgb(237, 130, 22), rgb(102, 228, 12));
+    color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(29, 146, 204, 0.3);
+    color: #17c73ad5;
+    font-size: 15px;
+
+
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Hero Section with Parallax Effect */
+.hero {
+    background: url('Design\ 1.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    filter: blur(0.6px);
+    -webkit-filter: blur(0.6px);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    margin-bottom: 400px;
+    font-size: 30px;
+    background: linear-gradient(to right, rgb(237, 130, 22), rgb(102, 228, 12));
+    color: transparent;
+    background-clip: text;
+    /* display: inline-block; */
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+
+/* Sections */
+section {
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, rgb(125, 99, 64), rgb(153, 122, 30));
+    color: transparent;
+    background-clip: text;
+}
+
+/* General section styling */
+#projects {
+    padding: 60px;
+    background-color: #934a4a;
+    text-align: center;
+    background: linear-gradient(to right, rgb(232, 38, 35), rgb(105, 37, 232));
+    color: transparent;
+    background-clip: text;
+    margin-left: 15px;
+    font-size: 20px;
+
+
+}
+
+#projects h2 {
+    /* margin-left:15px; */
+    margin: 0.5rem 1rem;
+    font-size: 40px;
+    /* margin-left: 40px; */
+    color: #333;
+    background: linear-gradient(to right, rgb(237, 130, 22), rgb(102, 228, 12));
+    color: transparent;
+    background-clip: text;
+}
+
+/* Projects grid styling */
+.projects-grid {
+    width: 100%;
+    /* margin: 100%; */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #bc7e7e;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* Project card container */
+.project-card {
+    perspective: 1000px;
+    /* Needed for 3D flip effect */
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+}
+
+/* Inner part of the card */
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    /* transform: rotateY(180deg); */
+
+}
+
+/* Flip the card on hover */
+.project-card:hover .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back face styling */
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Hides back face when flipped */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* transform: rotateY(180deg); */
+
+}
+
+/* When the card is flipped, rotate it */
+.project-card.is-flipped .project-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front face styling */
+.project-card-front {
+    background-image: linear-gradient(to right,rgb(190, 132, 231),rgb(62, 91, 135));
+    background-color: #e35555;
+    color: #3be43b;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card-front h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card-front p {
+    font-size: 1em;
+    color: #e52b2b;
+}
+
+/* Back face styling */
+.project-card-back {
+    
+    max-height: "";
+    background-color: #333;
+    color: #fff;
+    transform: rotateY(180deg);
+    /* Start rotated */
+}
+
+.project-card-back h3 {
+    background: linear-gradient(to right, rgb(219, 174, 129), rgb(49, 204, 204));
+    color: transparent;
+    background-clip: text;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card-back p {
+    font-size: 1em;
+    color: #ddd;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        margin-bottom: 40px;
+        perspective: 1000px;
+
+    }
+}
+
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Contact Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+form button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+form button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+span {
+    background: linear-gradient(to right, rgb(197, 113, 64), rgb(124, 100, 105));
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+    /* font-size: 35px; */
+}
+
+footer p {
+    /* color: #c6a308; */
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(to right, rgb(79, 193, 228), rgb(85, 233, 16));
+    color: transparent;
+    background-clip: text;
+
+}
+
+section #about h2 p {
+    color: #c53124;
+    background: linear-gradient(to right, rgb(26, 15, 90), rgb(226, 190, 82));
+    color: transparent;
+    background-clip: text;
+}
+section #about{
+    margin-left:15px;
+    
+}
+
+.coding {
+    /* margin-left: 0.2rem; */
+    /* margin-right: 1rem; */
+    /* height:200px; */
+    font-size: 20px;
+    width:97%;
+    padding: 0.5rem;
+    /* padding-right: 0.5rem; */
+    margin: 0.5rem 1rem ;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: rgba(122, 103, 103, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #cfadad;
+}
+
+.coding:hover {
+    font-size: 25px;
+    background: linear-gradient(to right, rgb(124, 19, 17), rgb(105, 37, 232));
+    color: transparent;
+    background-clip: text;
+}
+
+._cd {
+    font-size: 25px;
+    margin-left: 20px;
+    background: linear-gradient(to right, rgba(114, 85, 18, 0.651), rgb(17, 192, 26));
+    color: transparent;
+    background-clip: text;
+}
+
+#abt {
+    /* margin-left: 15px; */
+    font-size: 20px;
+    width: 99%;
+    /* height: fit-content; */
+    padding: 0.5rem ;
+    margin: 0.2rem 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #b18d8d;
+}
+
+#abt:hover {
+    font-size: 25px;
+    background: linear-gradient(to right, rgb(124, 19, 17), rgb(105, 37, 232));
+    color: transparent;
+    background-clip: text;
+}
+
+.tmsl {
+    background: linear-gradient(to right, rgb(137, 237, 22), rgb(148, 230, 155));
+    color: transparent;
+    background-clip: text;
+    font-size: 20px;
+}
+
+#element:hover {
+    font-size: 45px;
+    background: linear-gradient(to right, rgb(228, 222, 48), rgb(137, 125, 159));
+    color: transparent;
+    background-clip: text;
+
+
+}
+
+/* Base Styles for Social Media Section */
+.social-icons {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* color: #b18d8d; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    /* background: linear-gradient(to right, #6a11cb, #2575fc); */
+    color: transparent;
+    background-clip: text;
+    /* border-radius: 10px; */
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+}
+
+.social-icons a {
+    font-size: 18px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* FontAwesome Icon Styles */
+.social-icons a i {
+    font-size: 20px;
+}
+
+/* Hover Effects */
+.instagram:hover {
+    background-color: #E4405F;
+}
+
+.facebook:hover {
+    background-color: #1877F2;
+}
+
+.whatsapp:hover {
+    background-color: #25D366;
+}
+
+.linkedin:hover {
+    background-color: #0077B5;
+}
+
+.github:hover {
+    background-color: #333333;
+}
+
+/* Trending CSS Shadow and Animation */
+.social-icons a:hover {
+    transform: scale(.95);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:active {
+    transform: scale(.9);
+}
+
+/* Responsive Design */
+
+/* Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .social-icons {
+        flex-direction: column;
+        /* Stack icons vertically */
+        gap: 10px;
+        /* Reduce gap between icons */
+    }
+
+    .social-icons a {
+        width: 100%;
+        /* Make each icon take full width */
+        justify-content: center;
+        /* Center text and icons */
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .social-icons a {
+        font-size: 16px;
+        /* Smaller text size for tablets */
+        padding: 12px;
+        /* Slightly reduce padding */
+    }
+
+    .social-icons a i {
+        font-size: 18px;
+        /* Smaller icon size */
+    }
+}
+
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ede2e2;
+    border-radius: 50%;
+    margin: 3px 5px 2px 0px;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #e0d0d0;
+    color: #e8d0d0;
+    padding: 5px 5px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    top: -6px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    bottom: -55px;
+    opacity: -1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+
+/* -- YouTube Link Styles -- */
+
+#source-link {
+    bottom: 30px;
+}
+
+#source-link>i {
+    color: rgb(94, 106, 210);
+}
+
+#yt-link {
+    top: 5px;
+}
+
+#yt-link>i {
+    color: rgb(219, 31, 106);
+
+}
+
+.meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+}
+
+.meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link>i,
+.meta-link>span {
+    height: 100px;
+    line-height: 100px;
+}
+
+.meta-link>span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    transition: color 700ms;
+}
+
+.project-1 .project-card-front {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm gradient */
+}
+
+.project-2 .project-card-front {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient */
+}
+
+.project-3 .project-card-front {
+    background: linear-gradient(135deg, #9be15d, #00e3ae); /* Green gradient */
+}
+
+.project-4 .project-card-front {
+    background: linear-gradient(135deg, #f7971e, #ffd200); /* Yellow/Orange gradient */
+}
+/* For the back of the project cards */
+.project-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    backface-visibility: hidden;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #333;
+    transform: rotateY(180deg);
+}
+.project-1 .project-card-back {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.project-2 .project-card-back {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.project-3 .project-card-back {
+    background: linear-gradient(135deg, #9be15d, #00e3ae);
+}
+
+.project-4 .project-card-back {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
